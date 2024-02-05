@@ -1,0 +1,42 @@
+﻿<Window x:Class="WCT_Temperatur.MainWindow"
+        Loaded="Window_Loaded"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WCT_Temperatur"
+        mc:Ignorable="d"
+        Title="Wind Chill Temperatur Rechner " Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF655C5C">
+
+        <Label Content="WindChillTemperatur 🥶" Foreground="Aqua" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" HorizontalAlignment="Left" Margin="95,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="43" Width="524">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.1"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Lufttemperatur Celsius" Foreground="Aqua" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="83,105,0,0" VerticalAlignment="Top" Width="250" Height="50" FontSize="20"/>
+        <Label Content="Windgeschwindigkeit Kmh" Foreground="Aqua" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="83,242,0,0" VerticalAlignment="Top" Width="250" Height="50" FontSize="20"/>
+        <Label Content="°C" Foreground="Aqua" HorizontalAlignment="Left" Margin="198,166,0,0" VerticalAlignment="Top" Height="40" FontSize="20"/>
+        <Label Content="Kmh" Foreground="Aqua" HorizontalAlignment="Left" Margin="198,316,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.268,-0.399" Height="38" Width="59" FontSize="20"/>
+        <Label Content="Die WindChillTemperatur beträgt" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Foreground="Aqua" HorizontalAlignment="Left" Margin="428,166,0,0" VerticalAlignment="Top" Width="251" Height="46"/>
+        <Label Content="°C" Background="#FF655C5C" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="30" Foreground="Aqua" HorizontalAlignment="Left" Margin="559,217,0,0" VerticalAlignment="Top" Height="75" Width="56" RenderTransformOrigin="-1.129,0.59"/>
+        <Label x:Name="ausgabe_WCT" Background="#FF655C5C" Foreground="Aqua" FontSize="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="428,217,0,0"  VerticalAlignment="Top" Width="126" Height="75"/>
+
+
+        <TextBox x:Name="eingabe_C" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Margin="93,166,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100" Height="40" FontSize="20"/>
+        <TextBox x:Name="eingabe_Kmh" VerticalContentAlignment="Center" HorizontalAlignment="Left"  Margin="93,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="40" FontSize="20"/>
+
+
+        <Button Content="Beenden" VerticalContentAlignment="Center" Foreground="Aqua" Background="DarkSlateGray" x:Name="beenden" Click="beenden_Click" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="667,30,0,0" VerticalAlignment="Top" Width="69" Height="29"/>
+        <Button IsDefault="True" Content="Ausrechnen" VerticalContentAlignment="Center" Foreground="Aqua" Background="DarkSlateGray" x:Name="btn_berechne" Click="btn_berechne_Click" HorizontalAlignment="Left" Margin="488,108,0,0" VerticalAlignment="Top" Height="34" Width="133" RenderTransformOrigin="1.892,-0.434"/>
+
+
+
+
+    </Grid>
+</Window>
